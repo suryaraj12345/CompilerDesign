@@ -1,0 +1,15 @@
+%{
+%}
+%%
+[aeiouAEIOU]+[a-zA-Z]* {printf("starting with vowel\n");}
+.+ {printf("not starting with vowel");}
+%%
+
+int yywrap()
+{}
+int main()
+{
+ printf("Enter the string:");
+ yylex();
+ return 0;
+}
